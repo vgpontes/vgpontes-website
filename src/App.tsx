@@ -1,15 +1,15 @@
 import React from 'react';
-import './App.css';
-import Button from 'react-bootstrap/Button';
+import VictorNavbar from "./components/VictorNavbar";
+import "./images/banner.jpg";
+import Banner from "./components/Banner";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Coming Soon
-        </p>
-          <Button variant="secondary">Hello World</Button>{' '}
+          <VictorNavbar/>
+          <Banner/>
       </header>
     </div>
   );

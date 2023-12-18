@@ -1,0 +1,32 @@
+.banner {
+    width: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.parentContainer {
+    position: relative;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bannerText {
+    text-align: center;
+}
+
+.superscript {
+    font-size: 2vw;
+}
+
+.headerText {
+    font-size: 8vw;
+}
