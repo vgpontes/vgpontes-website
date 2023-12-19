@@ -3,13 +3,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 function VictorNavbar() {
+    // style={{position: "relative", fontFamily: "Times New Roman", backgroundColor: "#FAF9F6"}}
+    // data-bs-theme="dark" for dark mode
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar sticky="top" expand="lg" style={{fontFamily: "Inconsolata", backgroundColor: "#FAF9F6"}}>
             <Container fluid>
-                <Navbar.Brand href="#home">Victor Pontes</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                <Navbar.Brand href="#">Victor Pontes</Navbar.Brand>
+                <Navbar.Toggle/>
+                <Navbar.Collapse>
+                    <Nav>
                         <Nav.Link href="#aboutme">About Me</Nav.Link>
                         <Nav.Link href="#experience">Experience</Nav.Link>
                         <Nav.Link href="#projects">Projects</Nav.Link>

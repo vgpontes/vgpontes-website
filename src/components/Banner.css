@@ -9,7 +9,7 @@
 
 .parentContainer {
     position: relative;
-    color: white;
+    color: #FAF9F6;
 }
 
 .centered {
@@ -25,8 +25,11 @@
 
 .superscript {
     font-size: 2vw;
+    font-family: "Times New Roman", Times, serif;
+    transform: translate(0%, 100%);
 }
 
 .headerText {
     font-size: 8vw;
+    font-family: "Times New Roman", Times, serif;
 }
