@@ -1,7 +1,8 @@
 import React, {ReactElement} from "react";
 import {Stack} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import {text} from "stream/consumers";
+// @ts-ignore
+import Fade from 'react-reveal/Fade'
 
 export interface BlockProps {
     blockTitle: string;
@@ -9,23 +10,30 @@ export interface BlockProps {
     blockElement?: ReactElement | ReactElement[];
     dark?: boolean;
 }
-function Block(props: BlockProps) {
-    var bgColor = "#FAF9F6"
-    var textColor = "black"
-    if (props.dark) {
-        bgColor = "#212120"
-        textColor = "#FAF9F6"
+class Block extends React.Component<BlockProps> {
+    constructor(props:BlockProps) {
+        super(props);
     }
-    return (
-        <Stack>
-            <div style={{backgroundColor: bgColor, textAlign: "center", fontFamily: "Inconsolata"}}>
-                <h1 id={props.blockId} style={{color: textColor, position: "relative", paddingTop: '25px'}}>{props.blockTitle}</h1>
-                <Container>
-                    <p style={{color: textColor}}>{props.blockElement}</p>
-                </Container>
-            </div>
-        </Stack>
-    );
+    render() {
+        var bgColor = "#FAF9F6"
+        var textColor = "black"
+        if (this.props.dark) {
+            bgColor = "#212120"
+            textColor = "#FAF9F6"
+        }
+        return (
+            <Stack>
+                <div style={{backgroundColor: bgColor, textAlign: "center", fontFamily: "Inconsolata"}}>
+                    <Fade bottom opposite>
+                        <h1 id={this.props.blockId} style={{color: textColor, position: "relative", paddingTop: '25px'}}>{this.props.blockTitle}</h1>
+                        <Container>
+                            <p style={{color: textColor}}>{this.props.blockElement}</p>
+                        </Container>
+                    </Fade>
+                </div>
+            </Stack>
+        );
+    }
 }
 
 export default Block;
