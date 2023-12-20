@@ -18,7 +18,7 @@ function Block(props: BlockItemProps) {
                     <h3 style={{textAlign: "left"}}><b>{props.itemHeading}</b></h3>
                 </Col>
                 <Col>
-                    <h2 style={{textAlign: "right"}}>{props.itemDate}</h2>
+                    <h3 style={{textAlign: "right"}}>{props.itemDate}</h3>
                 </Col>
             </Row>
             <Row>
