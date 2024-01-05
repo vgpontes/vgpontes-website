@@ -114,8 +114,9 @@ function App() {
     const [isBannerRendered, setIsBannerRendered] = useState(false);
 
     useEffect(() => {
-        // Set the flag to true after the first component has fully rendered
-        setIsBannerRendered(true);
+        setTimeout(() => {
+            setIsBannerRendered(true);
+        }, 500)
     }, []); // Empty dependency array means this effect runs once after the initial render
 
     return (

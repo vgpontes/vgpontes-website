@@ -7,8 +7,9 @@ function Banner() {
     const [isImageRendered, setImageRendered] = useState(false);
 
     useEffect(() => {
-        // Set the flag to true after the first component has fully rendered
-        setImageRendered(true);
+        setTimeout(() => {
+            setImageRendered(true);
+        }, 100)
     }, []); // Empty dependency array means this effect runs once after the initial render
 
     return (
