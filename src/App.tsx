@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import VictorNavbar from "./components/VictorNavbar";
 import "./images/banner.jpg";
 import Banner from "./components/Banner";
@@ -111,16 +111,24 @@ function App() {
 
     const projectList = [stataProjectItem, javaFxProjectItem, arduinoProjectItem]
 
+    const [isBannerRendered, setIsBannerRendered] = useState(false);
+
+    useEffect(() => {
+        // Set the flag to true after the first component has fully rendered
+        setIsBannerRendered(true);
+    }, []); // Empty dependency array means this effect runs once after the initial render
 
     return (
         <div className="App">
             <header className="App-header">
                 <VictorNavbar/>
                 <Banner/>
-                <Block blockTitle="About Me" blockId="aboutme" blockElement={description}/>
-                <Block blockTitle="Experience" blockId="experience" blockElement={experienceList}/>
-                <Block blockTitle="Projects" blockId="projects" blockElement={projectList}/>
-                <Block blockTitle="Social" blockId="social" blockElement=<Social/> dark={true}/>
+                {isBannerRendered && <div>
+                    <Block blockTitle="About Me" blockId="aboutme" blockElement={description}/>
+                    <Block blockTitle="Experience" blockId="experience" blockElement={experienceList}/>
+                    <Block blockTitle="Projects" blockId="projects" blockElement={projectList}/>
+                    <Block blockTitle="Social" blockId="social" blockElement=<Social/> dark={true}/>
+                </div>}
             </header>
         </div>
     );
