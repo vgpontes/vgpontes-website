@@ -122,15 +122,13 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <VictorNavbar/>
-                <Banner onRender={() => setIsBannerRendered(true)}/>
-                {isBannerRendered && (
-                    <>
-                        <Block blockTitle="About Me" blockId="aboutme" blockElement={description}/>
-                        <Block blockTitle="Experience" blockId="experience" blockElement={experienceList}/>
-                        <Block blockTitle="Projects" blockId="projects" blockElement={projectList}/>
-                        <Block blockTitle="Social" blockId="social" blockElement=<Social/> dark={true}/>
-                    </>
-                )}
+                <Banner/>
+                {isBannerRendered && <div>
+                    <Block blockTitle="About Me" blockId="aboutme" blockElement={description}/>
+                    <Block blockTitle="Experience" blockId="experience" blockElement={experienceList}/>
+                    <Block blockTitle="Projects" blockId="projects" blockElement={projectList}/>
+                    <Block blockTitle="Social" blockId="social" blockElement=<Social/> dark={true}/>
+                </div>}
             </header>
         </div>
     );

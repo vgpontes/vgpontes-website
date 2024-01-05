@@ -1,19 +1,9 @@
 import Image from "react-bootstrap/Image";
-import React, {useEffect} from "react";
+import React from "react";
 import bannerImage from "../images/banner.jpg"
 import "./Banner.css"
 
-interface BannerProps {
-    onRender?: () => void;
-}
-
-function Banner({ onRender }: BannerProps) {
-    useEffect(() => {
-        if (onRender) {
-            onRender();
-        }
-    }, [onRender])
-
+function Banner() {
     return (
         <div className="parentContainer">
             <Image className="banner" src={bannerImage} fluid/>
