@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import * as colors from "tailwindcss/colors"
 
 const config: Config = {
   content: [
@@ -10,12 +9,17 @@ const config: Config = {
   theme: {
     extend:{
       colors: {
-        'dark-bg': '#1A1A24'
+        'light-gray': '#495060'
       },
       spacing: {
         '515': '515px',
         '90': '90px',
         '797': "797px"
+      },
+      fontFamily: {
+        'mono': ['var(--font-ibm-mono)'],
+        'sans-300': ['var(--font-ibm-sans-300)'],
+        'sans-400': ['var(--font-ibm-sans-400)']
       }
     }
   },
