@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend:{
       colors: {
-        'light-gray': '#495060'
+        'light-gray': '#495060',
+        'md-gray': '#262A33',
+        'light-blue': '#008FFF'
       },
       spacing: {
         '515': '515px',
@@ -18,8 +20,11 @@ const config: Config = {
       },
       fontFamily: {
         'mono': ['var(--font-ibm-mono)'],
+        'sans-200': ['var(--font-ibm-sans-200)'],
         'sans-300': ['var(--font-ibm-sans-300)'],
-        'sans-400': ['var(--font-ibm-sans-400)']
+        'sans-400': ['var(--font-ibm-sans-400)'],
+        'sans-700': ['var(--font-ibm-sans-700)'],
+        'mono-700': ['var(--font-ibm-mono-700)']
       }
     }
   },

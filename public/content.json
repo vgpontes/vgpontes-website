@@ -1,4 +1,63 @@
 {
     "headerText": "Detail-oriented and dedicated Software Engineer crafting solutions hosted on Amazon Web Services.",
-    "aboutMe": "I am a recent Computer Science graduate from Arizona State University who is passionate about software engineering.\n\nI previously interned at Amazon where I worked on automating the installation and updating of Stata, a data science tool, in AWS SageMaker for the Research Science team.\nI am currently a Software Development Engineer I for Amazon Pharmacy.\n\nIn my free time, I enjoy watching movies, playing video games, and lots of ping-pong.🏓"
+    "aboutMe": "I am a recent Computer Science graduate from Arizona State University who is passionate about software engineering.\n\nI previously interned at Amazon where I worked on automating the installation and updating of Stata, a data science tool, in AWS SageMaker for the Research Science team.\nI am currently a Software Development Engineer I for Amazon Pharmacy.\n\nIn my free time, I enjoy watching movies, playing video games, and lots of ping-pong.🏓",
+    "experience": [
+        {
+            "position": "Software Engineer",
+            "employer": "State Farm",
+            "startDate": "Jan. 2024",
+            "endDate": "Jul. 2024",
+            "location": "Tempe, AZ",
+            "bulletPoints": [
+                "Developed and maintained horizontal software products responsible for opening and closing document batches hosted on Amazon Web Services for various lines of business",
+                "Earned recognition award for rapidly developing working code to automate batch closure during policy migration remediation, assisting 600K+ customers with missing policy packets",
+                "Spearheaded modernization of products by upgrading from Node.js version 16 to Node.js version 20 and AWS SDK from version 2 to version 3, enhancing security and performance",
+                "Optimized JavaScript code deployment for Lambdas by leveraging ESBuild, eliminating S3 bucket dependencies and reducing costs"
+            ]
+        },
+        {
+            "position": "Software Development Engineer Intern",
+            "employer": "Amazon",
+            "startDate": "May 2023",
+            "endDate": "Aug. 2023",
+            "location": "Seattle, WA",
+            "bulletPoints": [
+                "Designed and implemented the automated integration, installation, testing, and updating of Stata on a custom AWS SageMaker image",
+                "Reduced Docker image size by 35% resulting in faster pulling and uploading to AWS ECR",
+                "Collaborated with stakeholders to gather requirements and resolve ambiguities",
+                "Built package and defined CI/CD Pipeline for Research Science team to automate deployment and testing through ALPHA, BETA, and PROD stages",
+                "Documented configuration, licensing, and testing procedures to facilitate handover of project after internship",
+                "Contributed towards code involved in VP-level goal outside of project scope",
+                "Worked in an Agile framework, participating in daily stand-up meetings and biweekly Sprint meetings, fostering collaboration and iterative development"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "projectTitle": "Stata on SageMaker",
+            "startDate": "May 2023",
+            "endDate": "Aug. 2023",
+            "skillsUsed": "AWS CDK, TypeScript, Docker, AWS Suite, Python, Bash",
+            "bulletPoints": [
+                "Developed a package to automatically integrate Stata into AWS SageMaker for Amazon's Research Science team",
+                "Used AWS CDK in TypeScript to deploy CodePipeline infrastructure and Stata Package to AWS account in S3 Bucket",
+                "Managed and handled licensing requirements in a secure fashion by using AWS SecretsManager to safely store Stata license key",
+                "Created secure IAM Roles with controlled permissions following least privilege principle",
+                "Wrote automated unit testing in Python to ensure Stata and PyStata works in Docker container",
+                "Used secure encrypted constructs for storage of CodePipeline artifacts and Stata package in S3 Buckets"
+            ]
+        },
+        {
+            "projectTitle": "VIPER AI Camera Software",
+            "startDate": "Jan. 2023",
+            "endDate": "May 2023",
+            "skillsUsed": "C++, Python, Git",
+            "bulletPoints": [
+                "Collaborated with two Computer Science students to develop secure cryptography methods and proof-of-concept image processing functions for a security camera with machine learning capabilities",
+                "Implemented AES-256 and RSA encryption and decryption in C++ with the Crypto++ library to ensure security of video footage",
+                "Designed proof-of-concept code of Fourier transform model in Python using OpenCV to be used in filtering of images and edge detection",
+                "Worked in an Agile development framework, ensuring efficiency and adaptability"
+            ]
+        }
+    ]
 }
