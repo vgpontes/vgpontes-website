@@ -34,6 +34,13 @@
     ],
     "projects": [
         {
+            "projectTitle": "Minesweeper React",
+            "startDate": "Mar. 2024",
+            "endDate": "May 2024",
+            "skillsUsed": "TypeScript, React.JS, ESBuild",
+            "bulletPoints": []
+        },
+        {
             "projectTitle": "Stata on SageMaker",
             "startDate": "May 2023",
             "endDate": "Aug. 2023",
