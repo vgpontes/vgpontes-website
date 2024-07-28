@@ -3,6 +3,7 @@ import content from "../public/content.json"
 import { Experience } from "./components/Experience"
 import { ProjectTable } from "./components/ProjectTable"
 import { Badge } from "./components/Badge"
+import Link from "next/link"
 
 //const Badge = dynamic(() => import('../components/C'), { ssr: false })
 
@@ -47,12 +48,12 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center space-y-4">
             <h2 className="text-white text-2xl font-mono-700">CONTACT ME</h2>
             <div className="flex flex-row space-x-5">
-              <a href="https://www.linkedin.com/in/vgpontes/" target="_blank">
+              <Link href="https://www.linkedin.com/in/vgpontes/" target="_blank">
                 <Image src="/images/linkedin_vector.svg" width={37} height={37} alt="linkedin"/>
-              </a>
-              <a href="mailto:victorgpontes02@gmail.com">
+              </Link>
+              <Link href="mailto:victorgpontes02@gmail.com">
                 <Image src="/images/email_vector.svg" width={37} height={33} alt="email"/>
-              </a>
+              </Link>
             </div>
             <p className="text-light-gray text-lg font-mono-700">Made with love in Seattle, WA</p>
           </div>
