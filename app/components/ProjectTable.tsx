@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+'use client'
+
+import { useState } from 'react';
 import content from '../../public/content.json'
 import { Dates } from './Dates';
 
 export function ProjectTable() {
     const projects = content.projects;
-    const stata = projects[0]
 
     const [selectedProject, setSelectedProject] = useState(projects[0]);
 
@@ -17,7 +18,7 @@ export function ProjectTable() {
                 <div id="project-list" className="border-r border-light-gray w-1/3">
                     <ul className="space-y-10">
                         {projects.map((project) => 
-                            <li className='mt-16 ml-16'>
+                            <li key={`${project.projectTitle}`} className='mt-16 ml-16'>
                                 <button disabled={selectedProject == project} onClick={() => setSelectedProject(project)} className={`${selectedProject == project ? 'text-white' : 'text-light-gray hover:text-light-blue'} 
                                     font-mono-700 uppercase text-small text-light-gray transition hover:duration-500`}>
                                 {project.projectTitle}

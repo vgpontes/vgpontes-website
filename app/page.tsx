@@ -1,9 +1,10 @@
-'use client'
-
 import Image from "next/image"
 import content from "../public/content.json"
 import { Experience } from "./components/Experience"
 import { ProjectTable } from "./components/ProjectTable"
+import { Badge } from "./components/Badge"
+
+//const Badge = dynamic(() => import('../components/C'), { ssr: false })
 
 export default function Home() {
   // <footer className="sticky top-0 bg-white">navbar</footer>\
@@ -37,7 +38,25 @@ export default function Home() {
           <section id="projects" className="flex flex-col justify-center items-center h-screen p-20">
             <ProjectTable/>
           </section>
+          <section id="certifications" className="flex flex-col justify-center items-center p-20">
+            <h1 className="text-3xl max-w-xl font-mono-700 mb-11 text-white">/certifications</h1>
+            <Badge/>
+          </section>
         </article>
+        <footer id="contact" className="flex h-52 bg-dark-blue justify-center">
+          <div className="flex flex-col justify-center items-center space-y-4">
+            <h2 className="text-white text-2xl font-mono-700">CONTACT ME</h2>
+            <div className="flex flex-row space-x-5">
+              <a href="https://www.linkedin.com/in/vgpontes/" target="_blank">
+                <Image src="/images/linkedin_vector.svg" width={37} height={37} alt="linkedin"/>
+              </a>
+              <a href="mailto:victorgpontes02@gmail.com">
+                <Image src="/images/email_vector.svg" width={37} height={33} alt="email"/>
+              </a>
+            </div>
+            <p className="text-light-gray text-lg font-mono-700">Made with love in Seattle, WA</p>
+          </div>
+        </footer>
     </main>
     </>
   )

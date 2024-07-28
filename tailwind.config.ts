@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         'light-gray': '#495060',
         'md-gray': '#262A33',
-        'light-blue': '#008FFF'
+        'light-blue': '#008FFF',
+        'dark-blue': '#15151C'
       },
       spacing: {
         '515': '515px',
