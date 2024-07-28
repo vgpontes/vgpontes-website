@@ -8,7 +8,7 @@ export interface DatesProps {
 export function Dates(props : DatesProps) {
     return (
         <div className="flex flex-row gap-2">
-            <Image src="/images/clock_vector.svg" width={13} height={16} alt="Dates"/>
+            <Image style={{width: 13, height: 16}} src="/images/clock_vector.svg" width={13} height={16} alt="Dates"/>
             <p className="text-sm font-sans-200 italic">{`${props.startDate} - ${props.endDate}`}</p>
         </div>
     )

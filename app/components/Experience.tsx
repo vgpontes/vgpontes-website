@@ -12,7 +12,7 @@ export function Experience() {
                     <div className="flex flex-col gap-2 my-4">
                         <Dates startDate={job.startDate} endDate={job.endDate}/>
                         <div className="flex flex-row gap-2">
-                            <Image src="/images/location_vector.svg" width={13} height={16} alt="Location"/>
+                            <Image style={{width: 13, height: 16}} src="/images/location_vector.svg" width={13} height={16} alt="Location"/>
                             <p className="text-sm font-sans-200 italic">{job.location}</p>
                         </div>
                     </div>
