@@ -15,7 +15,7 @@ export function ProjectTable() {
             <div id="title-section" className="flex justify-center text-white border border-light-gray rounded-t-lg w-full">
                 <h1 className="text-3xl font-mono-700 my-3">/projects</h1>
             </div>
-            <div id="bottom-section" className="lg:flex lg:flex-row border-x border-b border-light-gray h-[1000px] overflow-hidden rounded-b-lg">
+            <div id="bottom-section" className="lg:flex lg:flex-row border-x border-b border-light-gray overflow-auto h-screen rounded-b-lg">
                 <div id="project-list" className="text-center border-b lg:border-r border-light-gray lg:w-1/3 overflow-auto">
                     <ul className="snap-x snap-mandatory lg:snap-none mt-4 lg:space-x-0 lg:inline-block lg:space-y-10 lg:my-16 overflow-auto whitespace-nowrap lg:whitespace-normal">
                         {projects.map((project) => 
