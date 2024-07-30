@@ -11,17 +11,17 @@ export function ProjectTable() {
     const [selectedProject, setSelectedProject] = useState(projects[0]);
 
     return (
-        <div id="project-table" className="flex flex-col justify-top text-white h-full w-full px-20">
+        <div id="project-table" className="flex flex-col justify-top text-white h-full w-full xl:px-20">
             <div id="title-section" className="flex justify-center text-white border border-light-gray rounded-t-lg w-full">
-                <h1 className="text-3xl max-w-xl font-mono-700 my-3">/projects</h1>
+                <h1 className="text-3xl font-mono-700 my-3">/projects</h1>
             </div>
-            <div id="bottom-section" className="flex flex-row border-x border-b border-light-gray h-[1000px] overflow-hidden rounded-b-lg w-full">
-                <div id="project-list" className="border-r border-light-gray w-1/3">
-                    <ul className="space-y-10">
+            <div id="bottom-section" className="lg:flex lg:flex-row border-x border-b border-light-gray h-[1000px] overflow-hidden rounded-b-lg">
+                <div id="project-list" className="text-center border-b lg:border-r border-light-gray lg:w-1/3 overflow-auto">
+                    <ul className="snap-x snap-mandatory lg:snap-none mt-4 lg:space-x-0 lg:inline-block lg:space-y-10 lg:my-16 overflow-auto whitespace-nowrap lg:whitespace-normal">
                         {projects.map((project) => 
-                            <li key={`${project.projectTitle}`} className='text-left w-1/2 mx-auto my-16'>
+                            <li key={`${project.projectTitle}`} className='inline-block lg:block mb-4 lg:mb-0 w-full'>
                                 <button disabled={selectedProject == project} onClick={() => setSelectedProject(project)} className={`${selectedProject == project ? 'text-white' : 'text-light-gray hover:text-light-blue'} 
-                                    font-mono-700 uppercase text-small text-light-gray transition hover:duration-500`}>
+                                    snap-center lg:snap-align-none lg:block text-nowrap lg:text-wrap text-left font-mono-700 uppercase text-small text-light-gray transition hover:duration-500`}>
                                 {project.projectTitle}
                                 </button>
                             </li>)}
