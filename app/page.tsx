@@ -5,19 +5,15 @@ import { ProjectTable } from "./components/ProjectTable"
 import { Badge } from "./components/Badge"
 import Link from "next/link"
 
-//const Badge = dynamic(() => import('../components/C'), { ssr: false })
-
 export default function Home() {
-  // <footer className="sticky top-0 bg-white">navbar</footer>\
-  // mb-14
   return (
     <>
       <main className="min-h-screen">
         <article className="divide-y divide-solid divide-light-gray mx-12 sm:mx-20 md:mx-24 lg:mx-28">
-          <section id="intro" className="flex h-screen items-center justify-center">
+          <section id="intro" className="flex h-svh items-center justify-center">
             <div className="flex flex-col justify-center text-wrap text-center text-white items-center space-y-5 md:space-y-10">
               <Image className="w-[56px] h-[70px]" src="/images/logo-main.svg" height={56} width={70} alt="Victor Pontes Logo"/>
-              <h1 className="text-3xl md:text-4xl max-w-xl m-auto font-mono">Hi, I'm Victor.</h1>
+              <h1 className="text-3xl md:text-4xl max-w-xl m-auto font-mono">Hi, I&apos;m Victor.</h1>
               <p className="text-xl md:text-2xl max-w-3xl font-sans-400">{content.headerText}</p>
             </div>
           </section>
@@ -36,7 +32,7 @@ export default function Home() {
             <h1 className="text-3xl font-mono-700 mb-11 text-white">/experience</h1>
             <Experience/>
           </section>
-          <section id="projects" className="flex flex-col justify-center items-center py-20 xl:p-20">
+          <section id="projects" className="flex flex-col justify-center items-center h-screen py-20 xl:p-20">
             <ProjectTable/>
           </section>
           <section id="certifications" className="flex flex-col justify-center items-center p-20">

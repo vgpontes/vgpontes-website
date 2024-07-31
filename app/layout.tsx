@@ -10,8 +10,8 @@ const ibmSans400 = IBM_Plex_Sans({weight: "400", style: "normal", subsets: ["lat
 const ibmSans700 = IBM_Plex_Sans({weight: "700", style: "normal", subsets: ["latin"], variable: '--font-ibm-sans-700'})
 
 export const metadata: Metadata = {
-  title: "victor pontes",
-  description: "software engineer @ amazon",
+  title: "Victor Pontes",
+  description: "Software Engineer @ Amazon",
 };
 
 export default function RootLayout({
