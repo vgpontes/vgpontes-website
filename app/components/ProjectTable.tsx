@@ -37,7 +37,7 @@ export function ProjectTable() {
                             {selectedProject.skillsUsed}
                         </h2>
                         {selectedProject.projectTitle == "Minesweeper React" ? 
-                            <div className='overflow-hidden select-none touch-none'>
+                            <div className='h-full select-none touch-none'>
                                 <MinesweeperGame boardHeight={10} boardWidth={10} numMines={10}/>
                             </div> : null}
                         <ul className="list-disc list-inside space-y-4 font-sans-300 text-mdmd:text-lg">

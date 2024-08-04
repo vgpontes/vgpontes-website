@@ -32,7 +32,7 @@ export default function Home() {
             <h1 className="text-2xl lg:text-3xl font-mono-700 mb-11 text-white">/experience</h1>
             <Experience/>
           </section>
-          <section id="projects" className="flex flex-col justify-center items-center h-screen py-10 lg:py-20 xl:p-20">
+          <section id="projects" className="flex flex-col justify-center items-center h-svh py-10 lg:py-20 xl:p-20">
             <ProjectTable/>
           </section>
           <section id="certifications" className="flex flex-col justify-center items-center p-10 lg:p-20">

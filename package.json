@@ -10,7 +10,7 @@
     "deploy": "cdk deploy --profile dev"
   },
   "dependencies": {
-    "@vgpontes/minesweeper-react": "^1.1.17",
+    "@vgpontes/minesweeper-react": "^1.1.21",
     "aws-cdk-lib": "2.147.2",
     "aws-cdk-spa": "^0.0.2",
     "constructs": "^10.0.0",
