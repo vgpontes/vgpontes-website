@@ -64,7 +64,7 @@ jobs:
       - uses: actions/checkout@main
       - uses: actions/download-artifact@v4
         with:
-          name: go_build
+          name: website_build
           path: build/
       - uses: aws-actions/configure-aws-credentials@v4
         with:
