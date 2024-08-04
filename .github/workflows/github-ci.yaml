@@ -1,0 +1,78 @@
+name: vgpontes-website-pipeline
+
+on: push
+
+permissions:
+  id-token: write
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+    steps:
+      - uses: actions/checkout@main
+        with: 
+          ref: ${{ github.ref }}
+      - name: Building website
+        run: |
+          npm i
+          npm run build
+      - run: ls ./out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: website_build
+          path: out
+          if-no-files-found: error
+          retention-days: 1
+          overwrite: true
+  
+  cdk-synth:
+    name: AWS CDK Synth
+    needs: [build]
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+    steps:
+      - uses: actions/checkout@main
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: website_build
+          path: out/
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::655689396264:role/vgpontes-website-cicd-role
+      - name: Synthesizing AWS Infrastructure
+        run: |
+          npm i
+          npx cdk synth --no-staging
+          npx cdk diff
+
+  cdk-deploy:
+    name: AWS CDK Deploy
+    if: github.ref == 'refs/heads/main'
+    needs: cdk-synth
+    runs-on: ubuntu-latest
+    environment: manual_approval
+    container:
+      image: node:20
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/download-artifact@v4
+        with:
+          name: go_build
+          path: build/
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::655689396264:role/vgpontes-website-cicd-role
+      - name: Deploying AWS Infrastructure
+        run: |
+          npm i
+          npx cdk diff
+          npx cdk deploy --require-approval never
+  
